@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFA07A;
+        }
+        .timeline {
+            position: relative;
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px 0;
+        }
+        .line {
+            position: absolute;
+            top: 0;
+            left: 52.8%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 500%;
+            background-color: #FF8C00;
+        }
+        .event {
+            position: relative;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+        }
+        .event:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
+            z-index: 2;  /* Увеличиваем z-index, чтобы блок оказался поверх остальных */
+        }
+        .event .hidden-text {
+            display: none;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #555;
+        }
+        .event:hover .hidden-text {
+            display: block;
+        }
+        .event::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: 3px solid #007bff;
+            border-radius: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+        .event:nth-child(odd) {
+            left: calc(50% - 350px);
+        }
+        .event:nth-child(even) {
+            left: calc(50% + 50px);
+        }
+        .event:nth-child(odd)::before {
+            right: -11px;
+        }
+        .event:nth-child(even)::before {
+            left: -11px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="line"></div>
+        <div class="event" onclick="navigateTo('file:///C:/Users/QG/Downloads/page1.html')">
+            <h3>Событие 1</h3>
+            <p class="hidden-text">Описание события 1. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page2.html')">
+            <h3>Событие 2</h3>
+            <p class="hidden-text">Описание события 2. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page3.html')">
+            <h3>Событие 3</h3>
+            <p class="hidden-text">Описание события 3. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page4.html')">
+            <h3>Событие 4</h3>
+            <p class="hidden-text">Описание события 4. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page5.html')">
+            <h3>Событие 5</h3>
+            <p class="hidden-text">Описание события 5. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page6.html')">
+            <h3>Событие 6</h3>
+            <p class="hidden-text">Описание события 6. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page7.html')">
+            <h3>Событие 7</h3>
+            <p class="hidden-text">Описание события 7. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page8.html')">
+            <h3>Событие 8</h3>
+            <p class="hidden-text">Описание события 8. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page9.html')">
+            <h3>Событие 9</h3>
+            <p class="hidden-text">Описание события 9. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page10.html')">
+            <h3>Событие 10</h3>
+            <p class="hidden-text">Описание события 10. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page11.html')">
+            <h3>Событие 11</h3>
+            <p class="hidden-text">Описание события 11. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page12.html')">
+            <h3>Событие 12</h3>
+            <p class="hidden-text">Описание события 12. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page13.html')">
+            <h3>Событие 13</h3>
+            <p class="hidden-text">Описание события 13. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page14.html')">
+            <h3>Событие 14</h3>
+            <p class="hidden-text">Описание события 14. Наведите курсор для подробностей.</p>
+        </div>
+        <div class="event" onclick="navigateTo('page15.html')">
+            <h3>Событие 15</h3>
+            <p class="hidden-text">Описание события 15. Наведите курсор для подробностей.</p>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
+
+
+
